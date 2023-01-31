@@ -24,7 +24,7 @@ struct HomeView: View {
                         }
                     }
             } else {
-                LocationSearchView()
+                LocationSearchView(showLocationSearchView: $showLocationSearchView)
             }
             
             MapViewActionButton(showLocationSearchView: $showLocationSearchView)
@@ -37,5 +37,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(LocationSearchViewModel())
     }
 }
