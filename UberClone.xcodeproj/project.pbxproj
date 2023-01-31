@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		B443C3B329894DC10010B4D2 /* UberCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3B229894DC10010B4D2 /* UberCloneApp.swift */; };
-		B443C3B529894DC10010B4D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3B429894DC10010B4D2 /* ContentView.swift */; };
 		B443C3B729894DC10010B4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443C3B629894DC10010B4D2 /* Assets.xcassets */; };
 		B443C3BA29894DC10010B4D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443C3B929894DC10010B4D2 /* Preview Assets.xcassets */; };
+		B443C3C829894E8B0010B4D2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3C729894E8B0010B4D2 /* HomeView.swift */; };
+		B443C3CA29894EDA0010B4D2 /* UberMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3C929894EDA0010B4D2 /* UberMapViewRepresentable.swift */; };
+		B443C3CC298950F30010B4D2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3CB298950F30010B4D2 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B443C3AF29894DC10010B4D2 /* UberClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443C3B229894DC10010B4D2 /* UberCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberCloneApp.swift; sourceTree = "<group>"; };
-		B443C3B429894DC10010B4D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B443C3B629894DC10010B4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B443C3B929894DC10010B4D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B443C3C729894E8B0010B4D2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B443C3C929894EDA0010B4D2 /* UberMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRepresentable.swift; sourceTree = "<group>"; };
+		B443C3CB298950F30010B4D2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,11 @@
 		B443C3B129894DC10010B4D2 /* UberClone */ = {
 			isa = PBXGroup;
 			children = (
-				B443C3B229894DC10010B4D2 /* UberCloneApp.swift */,
-				B443C3B429894DC10010B4D2 /* ContentView.swift */,
+				B443C3C429894DF20010B4D2 /* App  */,
+				B443C3C329894DF00010B4D2 /* Core */,
+				B443C3C229894DE50010B4D2 /* Extensions */,
+				B443C3C129894DE20010B4D2 /* Managers */,
+				B443C3C029894DDF0010B4D2 /* Models */,
 				B443C3B629894DC10010B4D2 /* Assets.xcassets */,
 				B443C3B829894DC10010B4D2 /* Preview Content */,
 			);
@@ -65,6 +72,61 @@
 				B443C3B929894DC10010B4D2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B443C3C029894DDF0010B4D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B443C3C129894DE20010B4D2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B443C3CB298950F30010B4D2 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B443C3C229894DE50010B4D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B443C3C329894DF00010B4D2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B443C3C629894E7E0010B4D2 /* Views */,
+				B443C3C529894E750010B4D2 /* ViewModel */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B443C3C429894DF20010B4D2 /* App  */ = {
+			isa = PBXGroup;
+			children = (
+				B443C3B229894DC10010B4D2 /* UberCloneApp.swift */,
+			);
+			path = "App ";
+			sourceTree = "<group>";
+		};
+		B443C3C529894E750010B4D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B443C3C629894E7E0010B4D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B443C3C729894E8B0010B4D2 /* HomeView.swift */,
+				B443C3C929894EDA0010B4D2 /* UberMapViewRepresentable.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +199,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B443C3B529894DC10010B4D2 /* ContentView.swift in Sources */,
+				B443C3CC298950F30010B4D2 /* LocationManager.swift in Sources */,
 				B443C3B329894DC10010B4D2 /* UberCloneApp.swift in Sources */,
+				B443C3CA29894EDA0010B4D2 /* UberMapViewRepresentable.swift in Sources */,
+				B443C3C829894E8B0010B4D2 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +334,7 @@
 				DEVELOPMENT_TEAM = 9YRW6AKFZ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location to find nearby drivers & routes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +364,7 @@
 				DEVELOPMENT_TEAM = 9YRW6AKFZ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location to find nearby drivers & routes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
