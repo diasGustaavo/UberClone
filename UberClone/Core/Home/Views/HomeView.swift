@@ -25,6 +25,8 @@ struct HomeView: View {
                     }
             } else if mapState == .searchingForLocation {
                 LocationSearchView(mapState: $mapState)
+            } else if mapState == .locationSelected {
+                RideRequestView(mapState: $mapState)
             }
             
             MapViewActionButton(mapState: $mapState)
