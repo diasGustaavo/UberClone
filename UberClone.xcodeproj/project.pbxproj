@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41E9DF3298C045F00ADF648 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41E9DF2298C045F00ADF648 /* Double.swift */; };
 		B42F857B298BF797004A7C24 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42F857A298BF797004A7C24 /* RideType.swift */; };
 		B443C3B329894DC10010B4D2 /* UberCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3B229894DC10010B4D2 /* UberCloneApp.swift */; };
 		B443C3B729894DC10010B4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443C3B629894DC10010B4D2 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B41E9DF2298C045F00ADF648 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		B42F857A298BF797004A7C24 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		B443C3AF29894DC10010B4D2 /* UberClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443C3B229894DC10010B4D2 /* UberCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberCloneApp.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		B443C3C229894DE50010B4D2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B41E9DF2298C045F00ADF648 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				B443C3D829895D610010B4D2 /* LocationSearchView.swift in Sources */,
 				B443C3CC298950F30010B4D2 /* LocationManager.swift in Sources */,
 				B4DA4EE1298AB74A00B10A9A /* RideRequestView.swift in Sources */,
+				B41E9DF3298C045F00ADF648 /* Double.swift in Sources */,
 				B4DA4EDC298AA90000B10A9A /* MapViewState.swift in Sources */,
 				B443C3D629895BD20010B4D2 /* MapViewActionButton.swift in Sources */,
 				B443C3B329894DC10010B4D2 /* UberCloneApp.swift in Sources */,

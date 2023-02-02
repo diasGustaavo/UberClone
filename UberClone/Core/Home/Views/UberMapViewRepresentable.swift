@@ -13,7 +13,7 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     @Binding var mapState: MapViewState
     
     let mapView = MKMapView()
-    let locationManager = LocationManager()
+    let locationManager = LocationManager.shared
     
     func makeUIView(context: Context) -> some UIView {
         mapView.delegate = context.coordinator
