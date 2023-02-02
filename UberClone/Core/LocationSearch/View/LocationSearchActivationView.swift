@@ -11,19 +11,19 @@ struct LocationSearchActivationView: View {
     var body: some View {
         HStack {
             Rectangle()
-                .fill(Color.black)
+                .fill(Color.theme.primaryTextColor)
                 .frame(width: 8, height: 8)
                 .padding(.horizontal)
             
             Text("Where to?")
-                .foregroundColor(Color(.darkGray))
+                .foregroundColor(Color.theme.primaryTextColor)
             
             Spacer()
         }
         .frame(width: UIScreen.main.bounds.width - 64, height: 50)
         .background(
             Rectangle()
-                .fill(Color.white)
+                .fill(Color.theme.backgroundColor)
                 .shadow(color: .black, radius: 6)
         )
     }

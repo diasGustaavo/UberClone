@@ -19,9 +19,9 @@ struct MapViewActionButton: View {
         } label: {
             Image(systemName: imageNameForState(mapState))
                 .font(.title2)
-                .foregroundColor(.black)
+                .foregroundColor(Color.theme.primaryTextColor)
                 .padding()
-                .background(.white)
+                .background(Color.theme.backgroundColor)
                 .clipShape(Circle())
                 .shadow(color: .black, radius: 6)
         }
@@ -44,7 +44,7 @@ struct MapViewActionButton: View {
         switch state {
         case .noInput:
             return "line.3.horizontal"
-        case .searchingForLocation, .locationSelected:
+        case .searchingForLocation, .locationSelected, .polylineAdded:
             return "arrow.left"
         default:
             return "line.3.horizontal"
