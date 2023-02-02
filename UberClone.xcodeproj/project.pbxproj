@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42F857B298BF797004A7C24 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42F857A298BF797004A7C24 /* RideType.swift */; };
 		B443C3B329894DC10010B4D2 /* UberCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3B229894DC10010B4D2 /* UberCloneApp.swift */; };
 		B443C3B729894DC10010B4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443C3B629894DC10010B4D2 /* Assets.xcassets */; };
 		B443C3BA29894DC10010B4D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B443C3B929894DC10010B4D2 /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B42F857A298BF797004A7C24 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		B443C3AF29894DC10010B4D2 /* UberClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B443C3B229894DC10010B4D2 /* UberCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberCloneApp.swift; sourceTree = "<group>"; };
 		B443C3B629894DC10010B4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				B4DA4EDB298AA90000B10A9A /* MapViewState.swift */,
+				B42F857A298BF797004A7C24 /* RideType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				B443C3C829894E8B0010B4D2 /* HomeView.swift in Sources */,
 				B443C3D229895A7E0010B4D2 /* LocationSearchActivationView.swift in Sources */,
 				B443C3DA298960210010B4D2 /* LocationSearchResultCell.swift in Sources */,
+				B42F857B298BF797004A7C24 /* RideType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

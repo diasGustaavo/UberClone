@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct RideRequestView: View {
-    @State private var startLocationText: String?
-    @Binding var mapState: MapViewState
     @EnvironmentObject var viewModel: LocationSearchViewModel
+    @State private var selectedRideType: RideType = .uberX
     
     var body: some View {
         VStack(alignment: .center) {
@@ -37,7 +36,7 @@ struct RideRequestView: View {
                 
                 VStack(alignment: .leading, spacing: 28) {
                     HStack {
-                        Text(startLocationText ?? "Current Location")
+                        Text("Current Location")
                             .font(.system(size: 16, weight: .semibold))
                             .padding(.horizontal)
                             .foregroundColor(.gray)
@@ -76,25 +75,31 @@ struct RideRequestView: View {
             // RIDE TYPES
             ScrollView(.horizontal) {
                 HStack (spacing: 12) {
-                    ForEach(0 ..< 3, id: \.self) { _ in
+                    ForEach(RideType.allCases) { type in
                         VStack(alignment: .leading) {
-                            Image("uber-x")
+                            Image(type.imageName)
                                 .resizable()
                                 .scaledToFit()
                             
-                            VStack(spacing: 4) {
-                                Text("Uber-X")
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(type.description)
                                     .font(.system(size: 14, weight: .semibold))
-                                    .foregroundColor(Color.gray)
                                 
                                 Text("$22.04")
-                                    .font(.system(size: 14, weight: .semibold))
+                                    .font(.system(size: 14, weight: .regular))
                             }
                             .padding(8)
                         }
                         .frame(width: 112, height: 140)
-                        .background(Color(.systemGroupedBackground))
+                        .foregroundColor(type == selectedRideType ? .white : .black)
+                        .background(Color(type == selectedRideType ? .systemBlue : .systemGroupedBackground))
+                        .scaleEffect(type == selectedRideType ? 1.05 : 1.0)
                         .cornerRadius(10)
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                selectedRideType = type
+                            }
+                        }
                     }
                 }
             }
@@ -155,7 +160,7 @@ struct RideRequestView: View {
 
 struct RideRequestView_Previews: PreviewProvider {
     static var previews: some View {
-        RideRequestView(mapState: .constant(.searchingForLocation))
+        RideRequestView()
             .environmentObject(LocationSearchViewModel())
     }
 }
