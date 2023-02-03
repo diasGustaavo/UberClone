@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         ZStack {
@@ -72,7 +73,7 @@ struct RegistrationView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.system(size: 14, weight: .semibold))
                         
-                        TextField("Enter your password", text: $password)
+                        SecureField("Enter your password", text: $password)
                             .frame(height: 32)
                             .background(Color.theme.backgroundColor)
                             .padding(.trailing)
@@ -85,7 +86,7 @@ struct RegistrationView: View {
                 
                 // Sign Up Button
                 Button {
-                    // sign up
+                    viewModel.registerUser(withEmail: email, password: password, fullname: name)
                 } label: {
                     HStack {
                         Spacer()
@@ -109,5 +110,6 @@ struct RegistrationView: View {
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
+            .environmentObject(AuthViewModel())
     }
 }

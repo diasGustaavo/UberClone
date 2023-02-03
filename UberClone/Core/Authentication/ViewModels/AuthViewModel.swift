@@ -14,4 +14,16 @@ class AuthViewModel: ObservableObject {
     init() {
         userSession = Auth.auth().currentUser
     }
+    
+    func registerUser(withEmail email: String, password: String, fullname: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let e = error {
+                print("DEBUG: Failed to sign up with error: \(e.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Registered user sucessfully")
+            print("DEBUGF: User id \(result?.user.uid)")
+        }
+    }
 }
