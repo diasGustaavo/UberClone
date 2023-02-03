@@ -13,7 +13,7 @@ struct UberCloneApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            RegistrationView()
                 .environmentObject(locationViewModel)
         }
     }
