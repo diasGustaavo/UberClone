@@ -110,28 +110,28 @@ struct RideRequestView: View {
             
             // SELECTED PAYMENT
             HStack {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color.blue)
-                            .frame(width: 50, height: 30)
-                            .cornerRadius(5)
-                        
-                        Text("Visa")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.white)
-                    }
-                    .padding(.leading)
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color.blue)
+                        .frame(width: 50, height: 30)
+                        .cornerRadius(5)
                     
-                    Text("**** 1234")
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                    
-                    Image(systemName: "chevron.right")
-                        .imageScale(.medium)
-                        .padding()
+                    Text("Visa")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.white)
                 }
+                .padding(.leading)
+                
+                Text("**** 1234")
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .imageScale(.medium)
+                    .padding()
+            }
             .frame(height: 50)
             .background(Color.theme.secondaryBackgroundColor)
             .cornerRadius(10)

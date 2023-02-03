@@ -33,12 +33,12 @@ struct LocationSearchView: View {
                 VStack {
                     TextField("Current Location", text: $startLocationText)
                         .frame(height: 32)
-                        .background(Color(.systemGroupedBackground))
+                        .background(Color.theme.secondaryBackgroundColor)
                         .padding(.trailing)
                     
                     TextField("Where to?", text: $viewModel.queryFragment)
                         .frame(height: 32)
-                        .background(Color(.systemGray4))
+                        .background(Color.theme.secondaryBackgroundColor)
                         .padding(.trailing)
                 }
             }
