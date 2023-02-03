@@ -21,12 +21,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct UberCloneApp: App {
     @StateObject var locationViewModel = LocationSearchViewModel()
+    @StateObject var authViewModel = AuthViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            HomeView()
                 .environmentObject(locationViewModel)
+                .environmentObject(authViewModel)
         }
     }
 }
