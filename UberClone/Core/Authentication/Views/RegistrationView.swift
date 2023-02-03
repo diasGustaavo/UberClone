@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    @State private var name: String = ""
     @State private var email: String = ""
+    @State private var password: String = ""
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
@@ -18,7 +21,7 @@ struct RegistrationView: View {
                 
                 // Back Button
                 Button {
-                    // go back
+                    dismiss()
                 } label: {
                     Image(systemName: "arrow.left")
                         .font(.title)
@@ -43,7 +46,7 @@ struct RegistrationView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.system(size: 14, weight: .semibold))
                         
-                        TextField("Enter your full name", text: $email)
+                        TextField("Enter your full name", text: $name)
                             .frame(height: 32)
                             .background(Color.theme.backgroundColor)
                             .padding(.trailing)
@@ -69,7 +72,7 @@ struct RegistrationView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.system(size: 14, weight: .semibold))
                         
-                        TextField("Enter your password", text: $email)
+                        TextField("Enter your password", text: $password)
                             .frame(height: 32)
                             .background(Color.theme.backgroundColor)
                             .padding(.trailing)
