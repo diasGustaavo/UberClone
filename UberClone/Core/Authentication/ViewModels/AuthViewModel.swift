@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
@@ -21,9 +22,6 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG: Failed to sign in with error: \(e.localizedDescription)")
                 return
             }
-            
-            print("DEBUG: Signed user in sucessfully")
-            print("DEBUGF: User id \(result?.user.uid)")
             self.userSession = result?.user
         }
     }
@@ -35,9 +33,13 @@ class AuthViewModel: ObservableObject {
                 return
             }
             
-            print("DEBUG: Registered user sucessfully")
-            print("DEBUGF: User id \(result?.user.uid)")
-            self.userSession = result?.user
+            guard let firebaseUser = result?.user else { return }
+            self.userSession = firebaseUser
+            
+            let user = User(fullname: fullname, email: email, uid: firebaseUser.uid)
+            guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
+            
+            Firestore.firestore().collection("users").document(firebaseUser.uid).setData(encodedUser)
         }
     }
     
