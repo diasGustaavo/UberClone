@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         GeometryReader { geo in
@@ -60,7 +61,7 @@ struct LoginView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.system(size: 14, weight: .semibold))
                             
-                            TextField("Enter your password", text: $password)
+                            SecureField("Enter your password", text: $password)
                                 .frame(height: 32)
                                 .background(Color.theme.backgroundColor)
                                 .padding(.trailing)
@@ -75,7 +76,6 @@ struct LoginView: View {
                         // Sign in with social
                         Group {
                             Spacer()
-                            
                             HStack {
                                 line
                                 Text("Or")
@@ -117,7 +117,7 @@ struct LoginView: View {
                         
                         Group {
                             Button {
-                                // action
+                                viewModel.signIn(withEmail: email, password: password)
                             } label: {
                                 HStack {
                                     Spacer()
@@ -162,5 +162,6 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+            .environmentObject(AuthViewModel())
     }
 }

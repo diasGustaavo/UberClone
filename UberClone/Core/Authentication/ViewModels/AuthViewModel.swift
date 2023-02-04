@@ -15,6 +15,19 @@ class AuthViewModel: ObservableObject {
         userSession = Auth.auth().currentUser
     }
     
+    func signIn(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let e = error {
+                print("DEBUG: Failed to sign in with error: \(e.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Signed user in sucessfully")
+            print("DEBUGF: User id \(result?.user.uid)")
+            self.userSession = result?.user
+        }
+    }
+    
     func registerUser(withEmail email: String, password: String, fullname: String) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let e = error {
@@ -24,6 +37,17 @@ class AuthViewModel: ObservableObject {
             
             print("DEBUG: Registered user sucessfully")
             print("DEBUGF: User id \(result?.user.uid)")
+            self.userSession = result?.user
+        }
+    }
+    
+    func signout() {
+        do {
+            try Auth.auth().signOut()
+            print("DEBUG: Did sign out with firebase")
+            self.userSession = nil
+        } catch {
+            print("DEBUG: Failed to sign out with error: \(error.localizedDescription)")
         }
     }
 }
