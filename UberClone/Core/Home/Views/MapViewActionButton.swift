@@ -32,7 +32,8 @@ struct MapViewActionButton: View {
     func actionForState(_ state: MapViewState) {
         switch state {
         case .noInput:
-            authViewModel.signout()
+//            authViewModel.signout()
+            break
         case .searchingForLocation:
             mapState = .noInput
         case .locationSelected, .polylineAdded:
