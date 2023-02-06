@@ -48,17 +48,24 @@ struct SideMenuView: View {
                                 .imageScale(.medium)
                             Text("Make Money Driving")
                                 .font(.system(size: 16, weight: .semibold))
-                                .padding (6)
+                                .padding(6)
                         }
                         .foregroundColor(Color.theme.primaryTextColor)
                     }
                     
                     
                     Divider()
-                        .padding(.vertical)
+                        .padding(.top)
                     
-                    ForEach(SideMenuOptionViewModel.allCases, id: \.self) { viewModel in
-                        SideMenuButton(sideMenuOptionViewModel: viewModel)
+                    VStack(alignment: .leading) {
+                        ForEach(SideMenuOptionViewModel.allCases) { viewModel in
+                            NavigationLink(value: viewModel) {
+                                SideMenuButton(sideMenuOptionViewModel: viewModel)
+                            }
+                        }
+                    }
+                    .navigationDestination(for: SideMenuOptionViewModel.self) { viewModel in
+                        Text(viewModel.title)
                     }
                     
                     Spacer()
@@ -81,9 +88,7 @@ struct SideMenuButton: View {
     let sideMenuOptionViewModel: SideMenuOptionViewModel
     
     var body: some View {
-        Button {
-            // action
-        } label: {
+        HStack {
             Image(systemName: sideMenuOptionViewModel.imageName)
                 .font (.title2)
                 .imageScale(.medium)
