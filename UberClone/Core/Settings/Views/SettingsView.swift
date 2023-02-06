@@ -5,15 +5,6 @@
 //  Created by Gustavo Dias on 06/02/23.
 //
 
-//Image(systemName: "arrow.left")
-//    .font(.title2)
-//    .foregroundColor(Color.theme.primaryTextColor)
-//    .padding(.vertical)
-//
-//Text("Settings")
-//    .font(.title)
-//    .fontWeight(.bold)
-
 import SwiftUI
 
 struct SettingsView: View {
@@ -49,6 +40,7 @@ struct SettingsView: View {
                                 .foregroundColor(Color.theme.primaryTextColor)
                                 .padding(.vertical)
                         }
+                        .padding(.vertical, 8)
                     }
                     
                     Section("Favorites") {
@@ -71,12 +63,16 @@ struct SettingsView: View {
                 }
             }
         }
+        .navigationTitle("Settings")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        NavigationStack {
+            SettingsView()
+        }
     }
 }
 
