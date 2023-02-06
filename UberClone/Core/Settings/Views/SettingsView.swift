@@ -53,11 +53,10 @@ struct SettingsView: View {
                     Section("Favorites") {
                         ForEach(SavedLocationViewModel.allCases) { viewModel in
                             NavigationLink {
-                                Text(viewModel.title)
+                                SavedLocationSearchView()
                             } label: {
                                 SavedLocationRowView(viewModel: viewModel)
                             }
-
                         }
                     }
                     
