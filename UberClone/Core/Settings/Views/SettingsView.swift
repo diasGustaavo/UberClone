@@ -51,9 +51,14 @@ struct SettingsView: View {
                     }
                     
                     Section("Favorites") {
-                        SavedLocationRowView(imageName: "house.circle.fill", title: "Home", subtitle: "Add Home")
-                        
-                        SavedLocationRowView(imageName: "archivebox.circle.fill", title: "Work", subtitle: "Add Work")
+                        ForEach(SavedLocationViewModel.allCases) { viewModel in
+                            NavigationLink {
+                                Text(viewModel.title)
+                            } label: {
+                                SavedLocationRowView(viewModel: viewModel)
+                            }
+
+                        }
                     }
                     
                     Section("Settings") {
@@ -87,23 +92,21 @@ struct SettingsView_Previews: PreviewProvider {
 }
 
 struct SavedLocationRowView: View {
-    let imageName: String
-    let title: String
-    let subtitle: String
+    let viewModel: SavedLocationViewModel
     
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: imageName)
+            Image(systemName: viewModel.imageName)
                 .imageScale(.medium)
                 .font(.title)
                 .foregroundColor(Color(.systemBlue))
             
             VStack(alignment: .leading, spacing: 4) {
-                Text(title)
+                Text(viewModel.title)
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(Color.theme.primaryTextColor)
                 
-                Text(subtitle)
+                Text(viewModel.subtitle)
                     .font(.system(size: 14))
                     .foregroundColor (.gray)
             }
