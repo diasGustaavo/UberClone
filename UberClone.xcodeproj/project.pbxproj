@@ -21,6 +21,7 @@
 		B443C3D629895BD20010B4D2 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3D529895BD20010B4D2 /* MapViewActionButton.swift */; };
 		B443C3D829895D610010B4D2 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3D729895D610010B4D2 /* LocationSearchView.swift */; };
 		B443C3DA298960210010B4D2 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443C3D9298960210010B4D2 /* LocationSearchResultCell.swift */; };
+		B46017D029917C7C0057B879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B46017CF29917C7C0057B879 /* GoogleService-Info.plist */; };
 		B47CCF71298986350002148D /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47CCF70298986350002148D /* LocationSearchViewModel.swift */; };
 		B4A98FF1298EFBEF00599A93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A98FF0298EFBEF00599A93 /* User.swift */; };
 		B4A98FF6298F01F700599A93 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A98FF5298F01F700599A93 /* SideMenuView.swift */; };
@@ -35,7 +36,6 @@
 		B4D3CB03298DA6290095FCEB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3CB02298DA6290095FCEB /* AuthViewModel.swift */; };
 		B4DA4EDC298AA90000B10A9A /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA4EDB298AA90000B10A9A /* MapViewState.swift */; };
 		B4DA4EE1298AB74A00B10A9A /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */; };
-		B4E1B9DC298DA2A900DC45FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E1B9DB298DA2A900DC45FA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +54,7 @@
 		B443C3D529895BD20010B4D2 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		B443C3D729895D610010B4D2 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		B443C3D9298960210010B4D2 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		B46017CF29917C7C0057B879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B47CCF70298986350002148D /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		B4A98FF0298EFBEF00599A93 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4A98FF5298F01F700599A93 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		B4D3CB02298DA6290095FCEB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B4DA4EDB298AA90000B10A9A /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
-		B4E1B9DB298DA2A900DC45FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				B443C3C129894DE20010B4D2 /* Managers */,
 				B443C3C029894DDF0010B4D2 /* Models */,
 				B443C3B629894DC10010B4D2 /* Assets.xcassets */,
-				B4E1B9DB298DA2A900DC45FA /* GoogleService-Info.plist */,
+				B46017CF29917C7C0057B879 /* GoogleService-Info.plist */,
 				B443C3B829894DC10010B4D2 /* Preview Content */,
 			);
 			path = UberClone;
@@ -375,7 +375,7 @@
 			files = (
 				B443C3BA29894DC10010B4D2 /* Preview Assets.xcassets in Resources */,
 				B443C3B729894DC10010B4D2 /* Assets.xcassets in Resources */,
-				B4E1B9DC298DA2A900DC45FA /* GoogleService-Info.plist in Resources */,
+				B46017D029917C7C0057B879 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
+    private let user: User
+    @EnvironmentObject var viewModel: AuthViewModel
+    
+    init(user: User) {
+        self.user = user
+    }
+    
     var body: some View {
         ZStack {
             Color(UIColor(Color.theme.backgroundColor))
@@ -23,10 +30,10 @@ struct SettingsView: View {
                                 .frame(width: 64, height: 64)
                             
                             VStack(alignment: .leading) {
-                                Text("teste teste")
+                                Text(user.fullname)
                                     .font(.system(size: 16, weight: .semibold))
                                 
-                                Text(verbatim: "email@email.com")
+                                Text(verbatim: user.email)
                                     .font(.system(size: 14))
                                     .foregroundColor(Color.theme.primaryTextColor)
                                     .opacity(0.77)
@@ -59,6 +66,9 @@ struct SettingsView: View {
                         SettingsRowView(imageName: "dollarsign.circle.fill", title: "Make Money Driving", tintColor: Color(.systemGreen))
                         
                         SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign Out", tintColor: Color (.systemRed))
+                            .onTapGesture {
+                                viewModel.signout()
+                            }
                     }
                 }
             }
@@ -71,7 +81,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            SettingsView()
+            SettingsView(user: User(fullname: "Jose Ramalho Neto", email: "zeramalho@icloud.com", uid: "1234567"))
         }
     }
 }
