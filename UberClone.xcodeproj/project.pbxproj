@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B4018706298F2789003A21A5 /* SideMenuOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4018705298F2789003A21A5 /* SideMenuOptionViewModel.swift */; };
 		B41D37482992DFE400714A59 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D37472992DFE400714A59 /* DriverAnnotation.swift */; };
+		B41D374B2992EA7300714A59 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D374A2992EA7300714A59 /* UserService.swift */; };
 		B41E9DF3298C045F00ADF648 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41E9DF2298C045F00ADF648 /* Double.swift */; };
 		B41E9DF5298C075800ADF648 /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41E9DF4298C075800ADF648 /* UberLocation.swift */; };
 		B42F857B298BF797004A7C24 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42F857A298BF797004A7C24 /* RideType.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		B4018705298F2789003A21A5 /* SideMenuOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionViewModel.swift; sourceTree = "<group>"; };
 		B41D37472992DFE400714A59 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		B41D374A2992EA7300714A59 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B41E9DF2298C045F00ADF648 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		B41E9DF4298C075800ADF648 /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = "<group>"; };
 		B42F857A298BF797004A7C24 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B41D37492992EA6200714A59 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B41D374A2992EA7300714A59 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B443C3A629894DC10010B4D2 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		B443C3B129894DC10010B4D2 /* UberClone */ = {
 			isa = PBXGroup;
 			children = (
+				B41D37492992EA6200714A59 /* Services */,
 				B443C3C429894DF20010B4D2 /* App  */,
 				B443C3C329894DF00010B4D2 /* Core */,
 				B443C3C229894DE50010B4D2 /* Extensions */,
@@ -433,6 +444,7 @@
 				B443C3DA298960210010B4D2 /* LocationSearchResultCell.swift in Sources */,
 				B476D5712992D146007BAAE5 /* HomeViewModel.swift in Sources */,
 				B4B171F3298C2F5A0037C487 /* LoginView.swift in Sources */,
+				B41D374B2992EA7300714A59 /* UserService.swift in Sources */,
 				B42F857B298BF797004A7C24 /* RideType.swift in Sources */,
 				B4A98FF1298EFBEF00599A93 /* User.swift in Sources */,
 				B4CC95A429914D830038F191 /* SettingsView.swift in Sources */,
