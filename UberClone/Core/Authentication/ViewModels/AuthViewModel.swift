@@ -63,6 +63,14 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    // FETCH USER FUNCTION W/O COMBINE
+    
+//    func fetchUser() {
+//        UserService().fetchUser { user in
+//            self.currentUser = user
+//        }
+//    }
+    
     func fetchUser() {
         service.$user
             .sink { user in

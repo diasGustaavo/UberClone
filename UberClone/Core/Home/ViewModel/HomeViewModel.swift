@@ -31,6 +31,15 @@ class HomeViewModel: ObservableObject {
             }
     }
     
+    // FETCH USER FUNCTION W/O COMBINE
+    
+//    func fetchUser() {
+//        UserService().fetchUser { user in
+//            guard user.accountType == .passenger else { return }
+//            self.currentUser = user
+//        }
+//    }
+    
     func fetchUser() {
         service.$user
             .sink { user in

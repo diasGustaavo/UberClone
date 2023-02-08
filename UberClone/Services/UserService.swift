@@ -27,6 +27,8 @@ class UserService: ObservableObject {
         }
     }
     
+    // FETCH USER FUNCTION W/O COMBINE
+    
 //    static func fetchUser(completion: @escaping(User) -> Void) {
 //        guard let uid = Auth.auth().currentUser?.uid else { return }
 //
