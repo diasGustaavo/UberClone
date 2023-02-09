@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4018706298F2789003A21A5 /* SideMenuOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4018705298F2789003A21A5 /* SideMenuOptionViewModel.swift */; };
+		B41A35BC299534A8003B4E12 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A35BB299534A8003B4E12 /* Trip.swift */; };
 		B41D37482992DFE400714A59 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D37472992DFE400714A59 /* DriverAnnotation.swift */; };
 		B41D374B2992EA7300714A59 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D374A2992EA7300714A59 /* UserService.swift */; };
 		B41E9DF3298C045F00ADF648 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41E9DF2298C045F00ADF648 /* Double.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		B4018705298F2789003A21A5 /* SideMenuOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionViewModel.swift; sourceTree = "<group>"; };
+		B41A35BB299534A8003B4E12 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		B41D37472992DFE400714A59 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		B41D374A2992EA7300714A59 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B41E9DF2298C045F00ADF648 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				B4A98FF0298EFBEF00599A93 /* User.swift */,
 				B476D56C2992BCCC007BAAE5 /* SavedLocation.swift */,
 				B41D37472992DFE400714A59 /* DriverAnnotation.swift */,
+				B41A35BB299534A8003B4E12 /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				B443C3D829895D610010B4D2 /* LocationSearchView.swift in Sources */,
 				B4A98FF6298F01F700599A93 /* SideMenuView.swift in Sources */,
 				B443C3CC298950F30010B4D2 /* LocationManager.swift in Sources */,
+				B41A35BC299534A8003B4E12 /* Trip.swift in Sources */,
 				B46017D22991834E0057B879 /* SavedLocationViewModel.swift in Sources */,
 				B46017D42991862D0057B879 /* SavedLocationSearchView.swift in Sources */,
 				B4DA4EE1298AB74A00B10A9A /* RideRequestView.swift in Sources */,
