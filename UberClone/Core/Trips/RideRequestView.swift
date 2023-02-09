@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RideRequestView: View {
-    @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    @EnvironmentObject var homeViewModel: HomeViewModel
     @State private var selectedRideType: RideType = .uberX
     
     var body: some View {
@@ -43,13 +43,13 @@ struct RideRequestView: View {
                         
                         Spacer()
                         
-                        Text(locationViewModel.pickupTime ?? "")
+                        Text(homeViewModel.pickupTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(Color.gray)
                     }
                     
                     HStack {
-                        if let location = locationViewModel.selectedUberLocation {
+                        if let location = homeViewModel.selectedUberLocation {
                             Text(location.title)
                                 .font(.system(size: 16, weight: .semibold))
                                 .padding(.horizontal)
@@ -57,7 +57,7 @@ struct RideRequestView: View {
                         
                         Spacer()
                         
-                        Text(locationViewModel.dropOffTime ?? "")
+                        Text(homeViewModel.dropOffTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(Color.gray)
                     }
@@ -87,7 +87,7 @@ struct RideRequestView: View {
                                 Text(type.description)
                                     .font(.system(size: 14, weight: .semibold))
                                 
-                                Text(locationViewModel.computeRidePrice(forType: type).toCurrency())
+                                Text(homeViewModel.computeRidePrice(forType: type).toCurrency())
                                     .font(.system(size: 14, weight: .regular))
                             }
                             .foregroundColor(Color.theme.primaryTextColor)
@@ -164,6 +164,6 @@ struct RideRequestView: View {
 struct RideRequestView_Previews: PreviewProvider {
     static var previews: some View {
         RideRequestView()
-            .environmentObject(LocationSearchViewModel())
+            .environmentObject(HomeViewModel())
     }
 }
