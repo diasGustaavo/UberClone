@@ -139,7 +139,7 @@ struct RideRequestView: View {
             .padding(.vertical, 6)
             
             Button {
-                // action
+                homeViewModel.requestTrip()
             } label: {
                 ZStack {
                     Rectangle()
