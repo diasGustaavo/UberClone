@@ -90,11 +90,10 @@ struct RideRequestView: View {
                                 Text(homeViewModel.computeRidePrice(forType: type).toCurrency())
                                     .font(.system(size: 14, weight: .regular))
                             }
-                            .foregroundColor(Color.theme.primaryTextColor)
+                            .foregroundColor(type == selectedRideType ? .white : Color.theme.secondaryTextColor)
                             .padding(8)
                         }
                         .frame(width: 112, height: 140)
-                        .foregroundColor(type == selectedRideType ? .white : .black)
                         .background(type == selectedRideType ? .blue : Color.theme.secondaryBackgroundColor)
                         .scaleEffect(type == selectedRideType ? 1.05 : 1.0)
                         .cornerRadius(10)
