@@ -41,7 +41,7 @@ struct AcceptTripView: View {
                 Spacer()
                 
                 VStack {
-                    Text("10")
+                    Text("\(trip.travelTimeToPassenger ?? 0)")
                         .bold()
                     
                     Text("min")
@@ -105,7 +105,7 @@ struct AcceptTripView: View {
                     
                     Spacer()
                     
-                    Text("5.2")
+                    Text(trip.distanceToPassenger?.distanceInKmString() ?? "")
                         .lineLimit(1)
                         .font(.headline)
                         .fontWeight(.semibold)
@@ -168,6 +168,7 @@ struct AcceptTripView: View {
         .padding(.bottom, 24)
         .background(Color.theme.backgroundColor)
         .cornerRadius(30)
+        .shadow(color: Color.theme.secondaryBackgroundColor, radius: 20)
     }
 }
 
