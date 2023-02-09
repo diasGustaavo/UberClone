@@ -44,6 +44,7 @@
 		B4D3CB03298DA6290095FCEB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D3CB02298DA6290095FCEB /* AuthViewModel.swift */; };
 		B4DA4EDC298AA90000B10A9A /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA4EDB298AA90000B10A9A /* MapViewState.swift */; };
 		B4DA4EE1298AB74A00B10A9A /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */; };
+		B4FB06F52993E7B4004092DA /* AcceptTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FB06F42993E7B4004092DA /* AcceptTripView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		B4D3CB02298DA6290095FCEB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B4DA4EDB298AA90000B10A9A /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		B4FB06F42993E7B4004092DA /* AcceptTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTripView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */,
+				B4FB06F42993E7B4004092DA /* AcceptTripView.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				B443C3D229895A7E0010B4D2 /* LocationSearchActivationView.swift in Sources */,
 				B443C3DA298960210010B4D2 /* LocationSearchResultCell.swift in Sources */,
 				B476D5712992D146007BAAE5 /* HomeViewModel.swift in Sources */,
+				B4FB06F52993E7B4004092DA /* AcceptTripView.swift in Sources */,
 				B4B171F3298C2F5A0037C487 /* LoginView.swift in Sources */,
 				B41D374B2992EA7300714A59 /* UserService.swift in Sources */,
 				B42F857B298BF797004A7C24 /* RideType.swift in Sources */,
