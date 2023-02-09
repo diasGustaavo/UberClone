@@ -10,13 +10,18 @@ import MapKit
 
 struct AcceptTripView: View {
     @State private var region: MKCoordinateRegion
+    let trip: Trip
+    let annotationItem: UberLocation
     
-    init() {
-        let center = CLLocationCoordinate2D(latitude: 37.3346, longitude: -122.0090)
+    init(trip: Trip) {
+        let center = CLLocationCoordinate2D(latitude: trip.pickupLocation.latitude, longitude: trip.pickupLocation.longitude)
         
         let span = MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
         
         self.region = MKCoordinateRegion(center: center, span: span)
+        
+        self.trip = trip
+        self.annotationItem = UberLocation(title: trip.pickupLocationName, coordinate: trip.pickupLocation.toCoordinate())
     }
     
     var body: some View {
@@ -60,7 +65,7 @@ struct AcceptTripView: View {
                     .frame(width: 64, height: 64)
                 
                 VStack(alignment: .leading) {
-                    Text("JOSE")
+                    Text(trip.passengerName)
                         .bold()
                     
                     HStack {
@@ -81,7 +86,7 @@ struct AcceptTripView: View {
                         .font(.subheadline)
                         .foregroundColor(.gray)
                     
-                    Text("$22.04")
+                    Text(trip.tripCost.toCurrency())
                         .font(.title2)
                         .bold()
                 }
@@ -93,7 +98,7 @@ struct AcceptTripView: View {
             // Destination Info
             Group {
                 HStack {
-                    Text("Apple Campus")
+                    Text(trip.pickupLocationName)
                         .lineLimit(1)
                         .font(.headline)
                         .fontWeight(.semibold)
@@ -108,7 +113,7 @@ struct AcceptTripView: View {
                 .padding(.top)
                 
                 HStack {
-                    Text("Infinite Loop 1, Santa Clara County")
+                    Text(trip.pickupLocationAddress)
                         .lineLimit(1)
                         .font(.subheadline)
                         .foregroundColor(.gray)
@@ -123,11 +128,13 @@ struct AcceptTripView: View {
             }
             
             // map
-            Map(coordinateRegion: $region)
-                .frame(height: 220)
-                .cornerRadius(10)
-                .shadow(color: .black.opacity(0.6), radius: 10)
-                .padding(.vertical)
+            Map(coordinateRegion: $region, annotationItems: [annotationItem]) { item in
+                MapMarker(coordinate: item.coordinate)
+            }
+            .frame(height: 220)
+            .cornerRadius(10)
+            .shadow(color: .black.opacity(0.6), radius: 10)
+            .padding(.vertical)
             
             HStack {
                 Button {
@@ -166,6 +173,6 @@ struct AcceptTripView: View {
 
 struct AcceptTripView_Previews: PreviewProvider {
     static var previews: some View {
-        AcceptTripView()
+        AcceptTripView(trip: dev.mockTrip)
     }
 }
