@@ -37,6 +37,8 @@
 		B4B171EE298C29090037C487 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B171ED298C29090037C487 /* Color.swift */; };
 		B4B171F3298C2F5A0037C487 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B171F2298C2F5A0037C487 /* LoginView.swift */; };
 		B4B171F5298C2F640037C487 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B171F4298C2F640037C487 /* RegistrationView.swift */; };
+		B4BF56B32996B107004975B4 /* TripLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF56B22996B107004975B4 /* TripLoadingView.swift */; };
+		B4BF56B52996B1AD004975B4 /* TripAcceptedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */; };
 		B4CC95A429914D830038F191 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CC95A329914D830038F191 /* SettingsView.swift */; };
 		B4D3CAFB298DA3E60095FCEB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B4D3CAFA298DA3E60095FCEB /* FirebaseAuth */; };
 		B4D3CAFD298DA3E60095FCEB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B4D3CAFC298DA3E60095FCEB /* FirebaseFirestore */; };
@@ -80,6 +82,8 @@
 		B4B171ED298C29090037C487 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B4B171F2298C2F5A0037C487 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B4B171F4298C2F640037C487 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		B4BF56B22996B107004975B4 /* TripLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLoadingView.swift; sourceTree = "<group>"; };
+		B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAcceptedView.swift; sourceTree = "<group>"; };
 		B4CC95A329914D830038F191 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B4D3CB02298DA6290095FCEB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B4DA4EDB298AA90000B10A9A /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 			children = (
 				B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */,
 				B4FB06F42993E7B4004092DA /* AcceptTripView.swift */,
+				B4BF56B22996B107004975B4 /* TripLoadingView.swift */,
+				B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 			files = (
 				B443C3D829895D610010B4D2 /* LocationSearchView.swift in Sources */,
 				B4A98FF6298F01F700599A93 /* SideMenuView.swift in Sources */,
+				B4BF56B52996B1AD004975B4 /* TripAcceptedView.swift in Sources */,
 				B443C3CC298950F30010B4D2 /* LocationManager.swift in Sources */,
 				B41A35BC299534A8003B4E12 /* Trip.swift in Sources */,
 				B46017D22991834E0057B879 /* SavedLocationViewModel.swift in Sources */,
@@ -441,6 +448,7 @@
 				B42E32E329957BBD00A64028 /* GeoPoint.swift in Sources */,
 				B4B171EE298C29090037C487 /* Color.swift in Sources */,
 				B46017D629918C6B0057B879 /* LocationSearchResultsView.swift in Sources */,
+				B4BF56B32996B107004975B4 /* TripLoadingView.swift in Sources */,
 				B476D56D2992BCCC007BAAE5 /* SavedLocation.swift in Sources */,
 				B476D56F2992C947007BAAE5 /* DeveloperPreview.swift in Sources */,
 				B41D37482992DFE400714A59 /* DriverAnnotation.swift in Sources */,
