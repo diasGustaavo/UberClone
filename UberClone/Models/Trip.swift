@@ -5,10 +5,17 @@
 //  Created by Gustavo Dias on 09/02/23.
 //
 
+import FirebaseFirestoreSwift
 import Firebase
 
+enum TripState: Int, Codable {
+    case requested
+    case rejected
+    case accepted
+}
+
 struct Trip: Identifiable, Codable {
-    let id: String
+    @DocumentID var tripId: String?
     let passengerUid: String
     let driverUid: String
     let passengerName: String
@@ -24,4 +31,10 @@ struct Trip: Identifiable, Codable {
     
     var distanceToPassenger: Double?
     var travelTimeToPassenger: Int?
+    
+    var state: TripState
+    
+    var id: String {
+        return tripId ?? ""
+    }
 }
