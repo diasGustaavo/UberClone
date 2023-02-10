@@ -121,5 +121,6 @@ struct TripAcceptedView: View {
 struct TripAcceptedView_Previews: PreviewProvider {
     static var previews: some View {
         TripAcceptedView()
+            .environmentObject(DeveloperPreview.shared.mockHomeView)
     }
 }

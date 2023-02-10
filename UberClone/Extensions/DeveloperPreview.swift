@@ -17,6 +17,8 @@ extension PreviewProvider {
 class DeveloperPreview {
     static let shared = DeveloperPreview()
     
+    let mockHomeView = HomeViewModel()
+    
     let mockTrip = Trip(
         passengerUid: NSUUID().uuidString,
         driverUid: NSUUID().uuidString,

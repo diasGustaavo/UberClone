@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TripLoadingView: View {
+    @EnvironmentObject var viewModel: HomeViewModel
+    
     var body: some View {
         VStack {
             Capsule()
@@ -16,16 +18,19 @@ struct TripLoadingView: View {
                 .padding(.top, 8)
             
             HStack {
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Connecting you to a driver")
-                        .font(.headline)
-                    
-                    Text("Arriving at 1:30 PM")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color(.systemBlue))
+                
+                if let trip = viewModel.trip {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Connecting you to a driver")
+                            .font(.headline)
+                        
+                        Text("With destination to \(trip.dropoffLocationName)")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color(.systemBlue))
+                    }
+                    .padding()
                 }
-                .padding()
                 
                 Spacer()
                 
@@ -43,5 +48,6 @@ struct TripLoadingView: View {
 struct TripLoadingView_Previews: PreviewProvider {
     static var previews: some View {
         TripLoadingView()
+            .environmentObject(DeveloperPreview.shared.mockHomeView)
     }
 }
