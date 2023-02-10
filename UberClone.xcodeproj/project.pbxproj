@@ -39,6 +39,7 @@
 		B4B171F5298C2F640037C487 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B171F4298C2F640037C487 /* RegistrationView.swift */; };
 		B4BF56B32996B107004975B4 /* TripLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF56B22996B107004975B4 /* TripLoadingView.swift */; };
 		B4BF56B52996B1AD004975B4 /* TripAcceptedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */; };
+		B4BF56B72996B822004975B4 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BF56B62996B822004975B4 /* Spinner.swift */; };
 		B4CC95A429914D830038F191 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CC95A329914D830038F191 /* SettingsView.swift */; };
 		B4D3CAFB298DA3E60095FCEB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B4D3CAFA298DA3E60095FCEB /* FirebaseAuth */; };
 		B4D3CAFD298DA3E60095FCEB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B4D3CAFC298DA3E60095FCEB /* FirebaseFirestore */; };
@@ -84,6 +85,7 @@
 		B4B171F4298C2F640037C487 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		B4BF56B22996B107004975B4 /* TripLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLoadingView.swift; sourceTree = "<group>"; };
 		B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAcceptedView.swift; sourceTree = "<group>"; };
+		B4BF56B62996B822004975B4 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		B4CC95A329914D830038F191 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B4D3CB02298DA6290095FCEB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B4DA4EDB298AA90000B10A9A /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		B4DA4EDD298AB72C00B10A9A /* Trips */ = {
 			isa = PBXGroup;
 			children = (
+				B4BF56B62996B822004975B4 /* Spinner.swift */,
 				B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */,
 				B4FB06F42993E7B4004092DA /* AcceptTripView.swift */,
 				B4BF56B22996B107004975B4 /* TripLoadingView.swift */,
@@ -454,6 +457,7 @@
 				B41D37482992DFE400714A59 /* DriverAnnotation.swift in Sources */,
 				B443C3CA29894EDA0010B4D2 /* UberMapViewRepresentable.swift in Sources */,
 				B443C3C829894E8B0010B4D2 /* HomeView.swift in Sources */,
+				B4BF56B72996B822004975B4 /* Spinner.swift in Sources */,
 				B41E9DF5298C075800ADF648 /* UberLocation.swift in Sources */,
 				B443C3D229895A7E0010B4D2 /* LocationSearchActivationView.swift in Sources */,
 				B443C3DA298960210010B4D2 /* LocationSearchResultCell.swift in Sources */,
