@@ -80,7 +80,7 @@ extension HomeView {
                             AcceptTripView(trip: trip)
                                 .transition(.move(edge: .bottom))
                         } else if mapState == .tripAccepted {
-                            PickupPassengerView()
+                            PickupPassengerView(trip: trip)
                                 .transition(.move(edge: .bottom))
                         }
                     }

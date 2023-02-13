@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PickupPassengerView: View {
+    let trip: Trip
+    
     var body: some View {
         VStack {
             Capsule()
@@ -17,14 +19,14 @@ struct PickupPassengerView: View {
             
             // Header
             HStack {
-                Text("Pickup Jose at Apple Campus")
+                Text("Pickup \(trip.passengerName) at \(trip.dropoffLocationName)")
                     .lineLimit(2)
                     .font(.headline)
                 
                 Spacer()
                 
                 VStack {
-                    Text("10")
+                    Text("\(trip.travelTimeToPassenger ?? 0)")
                         .bold()
                     
                     Text("min")
@@ -48,7 +50,7 @@ struct PickupPassengerView: View {
                     .frame(width: 64, height: 64)
                 
                 VStack(alignment: .leading) {
-                    Text("Jose Neto")
+                    Text("\(trip.passengerName)")
                         .bold()
                     
                     HStack {
@@ -69,7 +71,7 @@ struct PickupPassengerView: View {
                         .font(.subheadline)
                         .foregroundColor(.gray)
                     
-                    Text("&22.05")
+                    Text("\(trip.tripCost.toCurrency())")
                         .font(.title2)
                         .bold()
                 }
@@ -103,6 +105,6 @@ struct PickupPassengerView: View {
 
 struct PickupPassengerView_Previews: PreviewProvider {
     static var previews: some View {
-        PickupPassengerView()
+        PickupPassengerView(trip: dev.mockTrip)
     }
 }
