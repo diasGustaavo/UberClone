@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4018706298F2789003A21A5 /* SideMenuOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4018705298F2789003A21A5 /* SideMenuOptionViewModel.swift */; };
+		B410CB82299AAE3F0057B275 /* PickupPassengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B410CB81299AAE3F0057B275 /* PickupPassengerView.swift */; };
 		B41A35BC299534A8003B4E12 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A35BB299534A8003B4E12 /* Trip.swift */; };
 		B41D37482992DFE400714A59 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D37472992DFE400714A59 /* DriverAnnotation.swift */; };
 		B41D374B2992EA7300714A59 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D374A2992EA7300714A59 /* UserService.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		B4018705298F2789003A21A5 /* SideMenuOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionViewModel.swift; sourceTree = "<group>"; };
+		B410CB81299AAE3F0057B275 /* PickupPassengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupPassengerView.swift; sourceTree = "<group>"; };
 		B41A35BB299534A8003B4E12 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		B41D37472992DFE400714A59 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		B41D374A2992EA7300714A59 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -108,6 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B410CB7F299AAE090057B275 /* Drivers */ = {
+			isa = PBXGroup;
+			children = (
+				B4FB06F42993E7B4004092DA /* AcceptTripView.swift */,
+				B410CB81299AAE3F0057B275 /* PickupPassengerView.swift */,
+			);
+			path = Drivers;
+			sourceTree = "<group>";
+		};
+		B410CB80299AAE0E0057B275 /* Passengers */ = {
+			isa = PBXGroup;
+			children = (
+				B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */,
+				B4BF56B22996B107004975B4 /* TripLoadingView.swift */,
+				B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */,
+			);
+			path = Passengers;
+			sourceTree = "<group>";
+		};
 		B41D37492992EA6200714A59 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,11 +365,9 @@
 		B4DA4EDD298AB72C00B10A9A /* Trips */ = {
 			isa = PBXGroup;
 			children = (
+				B410CB80299AAE0E0057B275 /* Passengers */,
+				B410CB7F299AAE090057B275 /* Drivers */,
 				B4BF56B62996B822004975B4 /* Spinner.swift */,
-				B4DA4EE0298AB74A00B10A9A /* RideRequestView.swift */,
-				B4FB06F42993E7B4004092DA /* AcceptTripView.swift */,
-				B4BF56B22996B107004975B4 /* TripLoadingView.swift */,
-				B4BF56B42996B1AD004975B4 /* TripAcceptedView.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -468,6 +487,7 @@
 				B42F857B298BF797004A7C24 /* RideType.swift in Sources */,
 				B4A98FF1298EFBEF00599A93 /* User.swift in Sources */,
 				B4CC95A429914D830038F191 /* SettingsView.swift in Sources */,
+				B410CB82299AAE3F0057B275 /* PickupPassengerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

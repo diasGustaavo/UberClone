@@ -68,7 +68,7 @@ class HomeViewModel: NSObject, ObservableObject {
                     self.fetchDrivers()
                     self.addTripObserverForPassenger()
                 } else {
-                    self.fetchTrips()
+                    self.addTripObserverForDriver()
                 }
             }
             .store(in: &cancellables)
@@ -145,14 +145,16 @@ extension HomeViewModel {
 //MARK: - Driver API
 
 extension HomeViewModel {
-    func fetchTrips() {
-        guard let currentUser = currentUser else { return }
+    
+    func addTripObserverForDriver() {
+        guard let currentUser = currentUser, currentUser.accountType == .driver else { return }
+        
         Firestore.firestore().collection("trips")
             .whereField("driverUid", isEqualTo: currentUser.uid)
-            .getDocuments { snapshot, _ in
-                guard let documents = snapshot?.documents, let document = documents.first else { return }
-                guard let trip = try? document.data(as: Trip.self) else { return }
+            .addSnapshotListener { snapshot, _ in
+                guard let change = snapshot?.documentChanges.first, change.type == .added || change.type == .modified else { return }
                 
+                guard let trip = try? change.document.data(as: Trip.self) else { return }
                 self.trip = trip
                 
                 self.getDestinationRoute(from: trip.driverLocation.toCoordinate(), to: trip.pickupLocation.toCoordinate()) { route in
