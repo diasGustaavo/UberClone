@@ -39,28 +39,29 @@ struct HomeView: View {
 extension HomeView {
     var mapView: some View {
         ZStack(alignment: .bottom) {
-            ZStack(alignment: .top) {
-                UberMapViewRepresentable(mapState: $mapState)
-                    .ignoresSafeArea()
-                
-                if mapState == .noInput {
-                    LocationSearchActivationView()
-                        .padding(.vertical, 72)
-                        .onTapGesture {
-                            withAnimation(.spring()) {
-                                mapState = .searchingForLocation
+            if let user = authViewModel.currentUser {
+                ZStack(alignment: .top) {
+                    UberMapViewRepresentable(mapState: $mapState)
+                        .ignoresSafeArea()
+                    
+                    if mapState == .noInput && user.accountType == .passenger {
+                        LocationSearchActivationView()
+                            .padding(.vertical, 72)
+                            .onTapGesture {
+                                withAnimation(.spring()) {
+                                    mapState = .searchingForLocation
+                                }
                             }
-                        }
-                } else if mapState == .searchingForLocation {
-                    LocationSearchView()
+                    } else if mapState == .searchingForLocation {
+                        LocationSearchView()
+                    }
+                    
+                    MapViewActionButton(mapState: $mapState, showSideMenu: $showSideMenu)
+                        .padding(.leading)
+                        .padding(.top, 4)
                 }
                 
-                MapViewActionButton(mapState: $mapState, showSideMenu: $showSideMenu)
-                    .padding(.leading)
-                    .padding(.top, 4)
-            }
-            
-            if let user = authViewModel.currentUser {
+                
                 if user.accountType == .passenger {
                     if mapState == .locationSelected || mapState == .polylineAdded {
                         RideRequestView()
