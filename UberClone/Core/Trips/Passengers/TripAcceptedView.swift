@@ -95,7 +95,7 @@ struct TripAcceptedView: View {
             }
             
             Button {
-                // action
+                viewModel.cancelledTripAsPassenger()
             } label: {
                 ZStack {
                     Rectangle()

@@ -40,7 +40,9 @@ struct MapViewActionButton: View {
                 .polylineAdded,
                 .tripRejected,
                 .tripAccepted,
-                .tripRequested:
+                .tripRequested,
+                .tripCancelledByDriver,
+                .tripCancelledByPassenger:
             mapState = .noInput
             viewModel.selectedUberLocation = nil
         }
@@ -54,7 +56,9 @@ struct MapViewActionButton: View {
                 .polylineAdded,
                 .tripRejected,
                 .tripAccepted,
-                .tripRequested:
+                .tripRequested,
+                .tripCancelledByDriver,
+                .tripCancelledByPassenger:
             return "arrow.left"
         default:
             return "line.3.horizontal"

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PickupPassengerView: View {
     let trip: Trip
+    @EnvironmentObject var viewModel: HomeViewModel
     
     var body: some View {
         VStack {
@@ -80,7 +81,7 @@ struct PickupPassengerView: View {
             Divider()
             
             Button {
-                // action
+                viewModel.cancelTripAsDriver()
             } label: {
                 ZStack {
                     Rectangle()
