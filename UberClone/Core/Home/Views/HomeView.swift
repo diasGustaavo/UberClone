@@ -78,7 +78,12 @@ extension HomeView {
             }
         }
         .onReceive(homeViewModel.$trip) { trip in
-            guard let trip = trip else { return }
+            print("DEBUG: Received a trip")
+            guard let trip = trip else {
+                print("DEBUG: Trip empty! mapState = .noInput")
+                self.mapState = .noInput
+                return 
+            }
             
             withAnimation(.spring()) {
                 switch trip.state {
@@ -87,6 +92,7 @@ extension HomeView {
                 case .rejected:
                     self.mapState = .tripRejected
                 case .accepted:
+                    print("TRIP ACCEPTED!!!!!!!!!!!")
                     self.mapState = .tripAccepted
                 case .passengerCancelled:
                     self.mapState = .tripCancelledByPassenger
