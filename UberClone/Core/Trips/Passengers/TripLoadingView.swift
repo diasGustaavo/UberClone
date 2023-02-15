@@ -38,7 +38,25 @@ struct TripLoadingView: View {
                     .padding()
             }
             .padding(.bottom, 24)
+            
+            Button {
+                viewModel.cancelledTripAsPassenger()
+            } label: {
+                ZStack {
+                    Rectangle()
+                        .cornerRadius(8)
+                        .foregroundColor(Color.red)
+                        .frame(height: 57)
+                        .padding(.horizontal)
+                    
+                    Text("CANCEL RIDE")
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 18, weight: .bold))
+                }
+            }
+            .frame(alignment: .center)
         }
+        .padding(.bottom, 24)
         .background(Color.theme.backgroundColor)
         .cornerRadius(16)
         .shadow(color: Color.theme.secondaryBackgroundColor, radius: 20)
