@@ -32,17 +32,17 @@ struct MapViewActionButton: View {
     
     func actionForState(_ state: MapViewState) {
         switch state {
-        case .noInput:
+        case .noInput,
+                .tripCancelledByDriver,
+                .tripCancelledByPassenger,
+                .tripRejected,
+                .tripAccepted,
+                .tripRequested:
             showSideMenu.toggle()
         case .searchingForLocation:
             mapState = .noInput
         case .locationSelected,
-                .polylineAdded,
-                .tripRejected,
-                .tripAccepted,
-                .tripRequested,
-                .tripCancelledByDriver,
-                .tripCancelledByPassenger:
+                .polylineAdded:
             mapState = .noInput
             viewModel.selectedUberLocation = nil
         }
@@ -50,15 +50,16 @@ struct MapViewActionButton: View {
     
     func imageNameForState(_ state: MapViewState) -> String {
         switch state {
-        case .noInput:
+        case .noInput,
+                .tripCancelledByDriver,
+                .tripCancelledByPassenger,
+                .tripRejected,
+                .tripAccepted,
+                .tripRequested:
             return "line.3.horizontal"
         case .locationSelected,
                 .polylineAdded,
-                .tripRejected,
-                .tripAccepted,
-                .tripRequested,
-                .tripCancelledByDriver,
-                .tripCancelledByPassenger:
+                .tripRejected:
             return "arrow.left"
         default:
             return "line.3.horizontal"
