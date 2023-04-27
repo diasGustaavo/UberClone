@@ -9,8 +9,9 @@ A clone for the popular Uber app made with SwiftUI.
 ![Simulator Screen Shot - iPhone 11 - 2023-02-15 at 15 43 13](https://user-images.githubusercontent.com/60455369/219123373-6df5ce15-96dc-4739-91a8-6cb86ad01dc4.png)
 
 
-## ⚙️ Frameworks & Tools Used
+## ⚙️ Frameworks & Dependencies Used
 
+- [SwiftUI](https://developer.apple.com/documentation/swiftui)
 - [UIKit](https://developer.apple.com/documentation/uikit)
 - [Combine](https://developer.apple.com/documentation/combine/)
 - [MapKit](https://developer.apple.com/documentation/mapkit/)
